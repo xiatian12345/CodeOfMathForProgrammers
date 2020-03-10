@@ -7,6 +7,7 @@ let getResult = function (man, woman) {
 		}
 		arr.push(temp);
 	}
+
 	arr[0][0] = 1;
 
 	for (let i = 0; i < woman + 1; i++) {
@@ -17,7 +18,9 @@ let getResult = function (man, woman) {
 			}
 		}
 	}
-	console.log(arr);
+	// console.log(arr);
+	// console.log(arr[woman][man - 1]);//---->0
+	// console.log(arr[woman - 1][man]);//---->2417461
 	return arr[woman][man - 1] + arr[woman - 1][man];
 };
 console.log(getResult(20, 10));
